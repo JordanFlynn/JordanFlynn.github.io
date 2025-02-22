@@ -10,23 +10,75 @@ body {
 header {
     background: #4c1d95;
     color: white;
-    padding: 1em 0;
+    padding: 1em;
+    max-width: 82%;
+    border-radius: 1em;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left h1 {
+    text-align: left;
+}
+
+.header-left img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+.header-right {
+    text-align: left;
+    padding-right: 5%;
+}
+
+.header-right div {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.header-right p {
+    font-size: 1em;
+    padding: 1em;
+    font-weight: bold;
+}
+
+header h1 {
+    text-align: left;
+    padding-left: 5%;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px; /* Adjust width as needed */
+    height: 100vh;
+    background: #3c1773;
+    padding-top: 20px;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: block; /* Change to vertical layout */
+    margin: 20px 0;
 }
 
 nav ul li a {
     color: #facc15;
     text-decoration: none;
     font-weight: bold;
+    display: block;
+    padding: 10px;
     transition: color 0.3s;
 }
 
@@ -45,15 +97,42 @@ section {
 }
 
 footer {
-    margin-top: 20px;
+    margin-top: 10px;
     background: #4c1d95;
     color: white;
     padding: 10px 0;
+    position: bottom;
+    bottom: 0;
+    width: 100%;
 }
 
-img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
+footer p{
+    margin-left: 5%;
+}
+
+header img {
     width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5%;
+    margin-left: 5%;
+}
+
+section {
+    width: 70%;
+    max-width: 1000px;
+    padding: 50px;
+    text-align: left;
+    margin-left: 170px;
+}
+
+section:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+header, footer {
+    margin-left: 170px;
+    width: calc(100% - 170px);
+    text-align: left;
 }
